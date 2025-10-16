@@ -44,7 +44,7 @@ const Logo = () => {
         </div>
       </div>
       <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
-        MyBrand
+        MyGallery
       </span>
     </div>
   );

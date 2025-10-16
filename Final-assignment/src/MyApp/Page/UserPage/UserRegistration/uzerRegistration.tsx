@@ -1,4 +1,3 @@
-import GoogleSignIn from "../../../Service/ReactQuery/mutation/GoogleSignIn";
 import RegistrationForm from "./RegistrationForm";
 
 const UzerRegistration = () => {
@@ -11,7 +10,6 @@ const UzerRegistration = () => {
 
       
         <div className="flex flex-col items-center space-y-4">
-          <GoogleSignIn />
           <div className="w-full border-t border-gray-200 my-4" />
         </div>
 
