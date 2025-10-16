@@ -14,26 +14,44 @@ const Navigation = () => {
 
   return (
     <nav className="flex items-center space-x-2">
-      {navigation.map((item, index) => {
-        const gradients = [
-          'from-purple-500 to-pink-500',
-          'from-cyan-500 to-blue-500',
-          'from-green-500 to-emerald-500'
-        ];
-        const hoverGradients = [
-          'hover:from-purple-600 hover:to-pink-600',
-          'hover:from-cyan-600 hover:to-blue-600',
-          'hover:from-green-600 hover:to-emerald-600'
-        ];
+      {navigation.map((item) => {
         
         return (
           <Link
             key={item.url}
             to={item.url}
-            className={`relative px-6 py-2.5 rounded-full font-semibold text-white bg-gradient-to-r ${gradients[index]} ${hoverGradients[index]} transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-xl`}
+            className="
+              relative
+              px-4 py-2
+              text-xl
+              font-semibold
+              text-[#c7b7ff]              
+              tracking-wide
+              transition-all
+              duration-500                 
+              hover:text-[#e8deff]          
+              hover:scale-110              
+            "
           >
-            <span className="relative z-10">{item.name}</span>
-            <div className="absolute inset-0 rounded-full bg-white opacity-0 hover:opacity-20 transition duration-300"></div>
+            <span
+              className="
+                relative
+                after:content-['']
+                after:absolute
+                after:left-0
+                after:bottom-0
+                after:h-[3px]             
+                after:w-0
+                after:bg-[#bda9ff]
+                after:rounded-full
+                after:transition-all
+                after:duration-500        
+                hover:after:w-full
+                hover:after:shadow-[0_0_10px_#bda9ff]
+              "
+            >
+              {item.name}
+            </span>
           </Link>
         );
       })}
